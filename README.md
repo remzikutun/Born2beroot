@@ -35,9 +35,4 @@
 → Oturum açma bilgilerini "id" kodu ile kontrol edilir.<br>
 → Kullanıcının hangi gruba ait olduğunu öğrenmek için "id kullanıcıadı", "groups", "cat /etc/group | grep kullanıcıadı" ve "cat /etc/group | grep sudo" komutlarından birisi kullanılabilir.<br>
 → Kullanıcı oluşturmak için "sudo adduser kullanıcıadı" veya "sudo useradd kullanıcıadı" komutu ile kontrol edilir. Bu iki komuttaki "adduser useradı" ve "useradd useradı" arasındaki tek fark adduser ile ekleme yapıldığında bilgiler ister ve girildikten sonra oluşturur, useradd ile ekleme yapıldığında bilgi istemeden kullanıcıyı oluşturur.<br>
-→ Grup oluşturmak için "addgroup grupadı" komutu ile oluşturulur.<br>
-→ Oluşturulan gruba kullanıcıyı eklemek için "usermod -aG groupadı useradı" komutu ile eklenir.<br>
-<ul>
-  <li>Oturum açma bilgilerini "id" kodu ile kontrol edilir.</li>
-  <li>Kullanıcının hangi gruba ait olduğunu öğrenmek için "id kullanıcıadı", "groups", "cat /etc/group | grep kullanıcıadı" ve "cat /etc/group | grep sudo" komutlarından birisi kullanılabilir.</li>
-</ul>
+→ Eğer kullanıcı "useradd" komutu ile oluşturulur ise şifre atama yapılmaz. Şifre atamak için "passwd
