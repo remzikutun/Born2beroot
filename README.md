@@ -51,4 +51,19 @@
 
 ## 4.Ana bilgisayar adı ve bölümleri
 → "hostname" kodu bilgisayar adı ve bölümlerini gösterir.<br>
-→ Ana bilgisayar adını değiştirmek için "sudo hostnamectl set-hostname yenibilgisayaradı" komutu,
+→ Ana bilgisayar adını değiştirmek için "sudo hostnamectl set-hostname yenibilgisayaradı" komutu veya alternatif olarak "sudo vim /etc/hosts" dosya içerisinde 127.0.0.1 yanına yeni bilgisayar adı yazılır.<br>
+→ Sanal disk bölümlerini görebilmek için "lsblk" komutu kullanılır. Buradaki ilk 4 disk birincil, geri kalan ise mantıksaldır.<br>
+→ LVM (Logical Volume Menager) bir diski bölümlere ayırma işlemi yapar ve ayrılan disklerden birisi dolar ise diğer diskten belli bir kısmı otomatik olarak diğerine aktarır.<br>
+
+## 5.Sudo
+→ "sudo --version" veya "sudo dpkg -l | grep sudo" komutu ile sudonun sanal makineye yüklenip yüklenmediği kontrol edilebilir.<br>
+→ "groups kullanıcıadı" ile kullanıcıadı kısmındaki kullanıcının grubunu gösterir. Alternatif olarak "cat /etc/group | grep sudo" ile grubunu görebiliriz.<br>
+→ Sudo herhangi bir kullanıcının sisteme yönetici olarak bağlanmaları gerekmeden yönetici yetkisi gerektiren komutları uygulayabilmesini sağlayan bir programdır. Sudo yetkisi ile yapılan işlemleri kimin yaptığının takibi daha kolaydır.<br>
+→ "sudo visudo" komutu ile sudonun katı kurallarının var olduğu doğrulanır.<br>
+→ "cd /var/log/sudo" içerisinde "ls -l" yapar isek sudo klasörünün var olduğunu ve en az bir dosyaya sahip olduğunun kontrolünü sağlayabiliriz.<br>
+→ sudo üzerinde bir kullanıcının şifresini "sudo passwd kullanıcıadı" şeklinde değiştirilir.<br>
+→ Sudo log dosyasının değiştiğini doğrulamak için "sudo cat /var/log/sudo/sudo.log" şeklinde yazarak log komutlarına yeni log eklendiğini görebiliriz.<br>
+
+## 6.Ufw
+
+
