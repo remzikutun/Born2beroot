@@ -55,7 +55,7 @@
 → Sanal disk bölümlerini görebilmek için "lsblk" komutu kullanılır. Buradaki ilk 4 disk birincil, geri kalan ise mantıksaldır.<br>
 → LVM (Logical Volume Menager) bir diski bölümlere ayırma işlemi yapar ve ayrılan disklerden birisi dolar ise diğer diskten belli bir kısmı otomatik olarak diğerine aktarır.<br>
 
-## 5.Sudo
+## 5.SUDO
 → "sudo --version" veya "sudo dpkg -l | grep sudo" komutu ile sudonun sanal makineye yüklenip yüklenmediği kontrol edilebilir.<br>
 → "groups kullanıcıadı" ile kullanıcıadı kısmındaki kullanıcının grubunu gösterir. Alternatif olarak "cat /etc/group | grep sudo" ile grubunu görebiliriz.<br>
 → Sudo herhangi bir kullanıcının sisteme yönetici olarak bağlanmaları gerekmeden yönetici yetkisi gerektiren komutları uygulayabilmesini sağlayan bir programdır. Sudo yetkisi ile yapılan işlemleri kimin yaptığının takibi daha kolaydır.<br>
@@ -64,6 +64,19 @@
 → sudo üzerinde bir kullanıcının şifresini "sudo passwd kullanıcıadı" şeklinde değiştirilir.<br>
 → Sudo log dosyasının değiştiğini doğrulamak için "sudo cat /var/log/sudo/sudo.log" şeklinde yazarak log komutlarına yeni log eklendiğini görebiliriz.<br>
 
-## 6.Ufw
+## 6.UFW
+→ "systemctl status ufw" komutu ile UFW'nin sisteme yüklendiğini ve aktif olduğunu kontrol edebiliriz.<br>
+→ UFW (Uncomplicated Firewall) kısaltmasıdır. Ubuntu gibi bazı linux dağıtımlarında kullanılan bir güvenlik duvarı (firewall) aracıdır. Bu araç, Ağ trafiğini kontrol etmeyi ve belirli kurallara göre izin vermek veya engellemek için kullanılır. Örneğin, belirli bir bağlantı noktasına gelen girişleri engellemek veya belirli bir uygulamanın internete erişimini sınırlamak gibi kurallar oluşturabilirsiniz.<br>
+→ "sudo ufw status numbered" komutu ile Ufw'deki aktif kuralları listeleyebiliriz.<br>
+→ "sudo ufw allow 8080" komutu ile 8080 numaralı bağlantı noktası açabiliriz.<br>
+→ "sudo ufw delete silineceksatırnumarası" komutu ile bağlantı noktalarını silebiliriz.<br>
 
+## 7.SSH
+→ "systemctl status ssh" komutu ile SSH'nin sisteme yüklendiğini ve aktif olduğunu kontrol edebiliriz.<br>
+→ "vim /etc/ssh/sshd_config" dosyasında sadece 4242 portunda çalıştığını ve "PermitRootLogin no" kısmı ise ssh ile bağlanır iken root olarak bağlanmayı engeller.<br>
+→ SSH (Secure Shell) kısaltmasıdır ve güvenli bir şekilde uzak bir bilgisayara erişim sağlamak için kullanılan bir ağ protokolüdür.<br>
+→ "ssh root@localhost -p 4242" komutu ile root olarak bağlanmayı deneyerek bağlanmadığını görebiliriz. Aynı şekilde "kullanıcıadı@localhost -p 22" komutu ile 22 portundan bağlanmayı deneyerek bağlanmadığını görebiliriz. "ssh kullanıcıadı@localhost -p 4242" komutu ile 4242 portundan bağlanmayı deneyerek bağlandığını görebiliriz.<br>
 
+## 8.Script Monitoring
+→ "vim usr/local/sbin/monitoring.sh" dosyasını açarak monitoring.sh dosya içeriğine uraşabiliriz.<br>
+→ 
