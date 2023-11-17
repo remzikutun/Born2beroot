@@ -1,4 +1,4 @@
-# Bern2beroot
+# Born2beroot
 
 ## 1.Projeye Genel Bakış
 #### Sanal makine nasıl çalışır ?
