@@ -101,8 +101,8 @@
       $arc: Sistem mimarisi bilgisini içerir.<br>
       $pcpu: Fiziksel CPU sayısını içerir.<br>
       $vcpu: Sanal CPU sayısını içerir.<br>
-      $uram, ${fram}, $pram: Kullanılan ve toplam RAM miktarını ve yüzdesini içerir.<br>
-      $udisk, ${fdisk}, $pdisk: Kullanılan ve toplam disk alanını ve yüzdesini içerir.<br>
+      $uram , ${fram} , $pram: Kullanılan ve toplam RAM miktarını ve yüzdesini içerir.<br>
+      $udisk , ${fdisk} , $pdisk: Kullanılan ve toplam disk alanını ve yüzdesini içerir.<br>
       $cpul: CPU yükünü içerir.<br>
       $lb: Son başlatma zamanını içerir.<br>
       $lvmu: LVM kullanılıp kullanılmadığını içerir.<br>
